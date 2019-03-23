@@ -16,8 +16,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         ButtonBaord()
+        CheckWin()
+//        Toast.makeText(this, Board.bt_1_check.toString(), Toast.LENGTH_LONG).show()
+    }
 
-        Toast.makeText(this, Board.bt_1_check.toString(), Toast.LENGTH_LONG).show()
+    fun CheckWin() {
+        var win = false
+
+        if (Board.bt_1_check == Board.bt_2_check &&
+            Board.bt_2_check == Board.bt_3_check &&
+            Board.bt_1_check.toInt() != 0) {
+            win = true
+            Toast.makeText(this, "WIN", Toast.LENGTH_LONG).show()
+        }
     }
 
     fun ButtonBaord() {
@@ -30,12 +41,12 @@ class MainActivity : AppCompatActivity() {
                 if (CountClick.countClick%2 == 0) {
                     bt_1.text = str_o
                     Board.bt_1_check = 1
-                    Toast.makeText(this, Board.bt_1_check.toString(), Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this, Board.bt_1_check.toString(), Toast.LENGTH_LONG).show()
                 }
                 else {
                     bt_1.text = str_x
                     Board.bt_1_check = 2
-                    Toast.makeText(this, Board.bt_1_check.toString(), Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this, Board.bt_1_check.toString(), Toast.LENGTH_LONG).show()
                 }
             }
         }

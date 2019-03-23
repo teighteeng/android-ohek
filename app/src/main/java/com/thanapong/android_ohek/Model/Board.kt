@@ -1,6 +1,8 @@
 package com.thanapong.android_ohek.Model
 
 import android.widget.Toast
+import java.lang.Math.log
+import kotlin.math.log
 
 class Board {
     companion object Committee {
@@ -14,6 +16,4 @@ class Board {
         var bt_8_check:Byte = 0
         var bt_9_check:Byte = 0
     }
-
-
 }
